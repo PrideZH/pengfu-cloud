@@ -29,6 +29,17 @@ spring:
         locator:
           enabled: true # 开启nacos注册中心路由功能
           lower-case-service-id: true # 服务名小写
+      # 必须指明Routes Swagger才可使用
+      routes:
+        - id: user
+          uri: lb://user
+          predicates:
+            - Path=/user/**
+        - id: order
+          uri: lb://order
+          predicates:
+            - Path=/order/**
+
   # redis配置
   redis:
     # Redis数据库索引（默认为0）

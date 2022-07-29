@@ -15,3 +15,6 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/pengfu-cloud?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: root
+
+swagger:
+  enable: true

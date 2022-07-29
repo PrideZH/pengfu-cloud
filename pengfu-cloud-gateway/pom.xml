@@ -29,7 +29,9 @@
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
 
-        <!-- Loadbalancer -->
+        <!-- 为Nacos提供负载均衡 (Nacos不兼容Gateway自带的Ribbon) -->
+        <!-- 不依赖会造成路由503 -->
+        <!-- Loadbalancer-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-loadbalancer</artifactId>
@@ -48,6 +50,12 @@
             <groupId>cn.dev33</groupId>
             <artifactId>sa-token-dao-redis-jackson</artifactId>
             <version>1.30.0</version>
+        </dependency>
+
+        <!-- Knife4j Spring Boot Starter -->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
         </dependency>
     </dependencies>
 
