@@ -7,11 +7,13 @@
 /pengfu-cloud-common/pengfu-cloud-common-core/target/
 /pengfu-cloud-common/pengfu-cloud-common-service/target/
 /pengfu-cloud-gateway/target/
+/pengfu-cloud-generator/target/
 /pengfu-cloud-service/target/
 /pengfu-cloud-service/pengfu-cloud-user/target/
 /pengfu-cloud-service/pengfu-cloud-order/target/
 /pengfu-cloud-service-api/target/
 /pengfu-cloud-service-api/pengfu-cloud-user-api/target/
 /pengfu-cloud-service-api/pengfu-cloud-order-api/target/
+/pengfu-cloud-admin/target/
 
 /log/

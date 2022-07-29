@@ -1,0 +1,17 @@
+package ${package.Service};
+
+import ${package.Entity}.${entity};
+import ${package.Mapper}.${table.mapperName};
+import ${superServiceImplClassPackage};
+
+/**
+#if(${table.comment})
+ * $!{table.comment} Service
+ *
+#end
+ * @author ${author}
+ * @since ${date}
+ */
+public class ${table.serviceName} extends ${superServiceImplClass}<${table.mapperName}, ${entity}> {
+
+}
