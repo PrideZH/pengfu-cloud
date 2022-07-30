@@ -22,6 +22,11 @@ public interface AppConstant {
     String APPLICATION_ORDER_NAME = APPLICATION_NAME_PREFIX + "order";
 
     /**
+     * 后台模块名称
+     */
+    String APPLICATION_ADMIN_NAME = APPLICATION_NAME_PREFIX + "admin";
+
+    /**
      * 开发环境
      */
     String DEV_CODE = "dev";

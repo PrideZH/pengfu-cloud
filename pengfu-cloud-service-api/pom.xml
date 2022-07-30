@@ -15,6 +15,7 @@
     <modules>
         <module>pengfu-cloud-user-api</module>
         <module>pengfu-cloud-order-api</module>
+        <module>pengfu-cloud-admin-api</module>
     </modules>
 
     <properties>
@@ -23,7 +24,7 @@
     </properties>
 
     <dependencies>
-        <!-- 通用模块 -->
+        <!-- Service通用模块 -->
         <dependency>
             <groupId>org.pengfu</groupId>
             <artifactId>pengfu-cloud-common-service</artifactId>

@@ -7,17 +7,17 @@ import lombok.ToString;
 import org.pengfu.domain.po.BasePO;
 
 /**
- * @author PrideZH <332842890@qq.com>
- * @date 2022/7/29 17:50
+ * @author PrideZH
+ * @since 2022-07-30
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
-@TableName
-public class SysPermission extends BasePO {
+@TableName("sys_role__permission")
+public class SysRolePermission extends BasePO {
 
-    private String name;
+    private Long roleId;
 
-    private String code;
+    private Long permissionId;
 
 }

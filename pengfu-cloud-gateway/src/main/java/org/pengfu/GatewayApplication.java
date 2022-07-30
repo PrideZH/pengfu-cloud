@@ -22,6 +22,7 @@ public class GatewayApplication {
 
         Environment env = application.getEnvironment();
         log.info("""
+                        
                         ----------------------------------------------------------
                         \tApplication '{}' is running! Access URLs:
                         \tLocal: \t\thttp://localhost:{}

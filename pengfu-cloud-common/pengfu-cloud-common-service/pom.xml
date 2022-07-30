@@ -68,16 +68,11 @@
             <version>2.2.2</version>
         </dependency>
 
+        <!-- Swagger 增强knife4j 微服务starter -->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
-            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <artifactId>knife4j-micro-spring-boot-starter</artifactId>
         </dependency>
-
-<!--        &lt;!&ndash; Swagger 增强knife4j 微服务starter &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>com.github.xiaoymin</groupId>-->
-<!--            <artifactId>knife4j-micro-spring-boot-starter</artifactId>-->
-<!--        </dependency>-->
     </dependencies>
 
 </project>

@@ -12,7 +12,7 @@ org.pengfu
 ├── pengfu-cloud-modules        // 业务模块
 │       └── pengfu-cloud-user                   // 用户模块 [9202]
 │       └── pengfu-cloud-order                  // 订单生成 [9203]
-├── pengfu-cloud-admin          // 后台管理模块 (单体项目) [9201]
+├── pengfu-cloud-admin          // 后台管理模块 [9201]
 ├── pom.xml                     // 公共依赖
 ```
 

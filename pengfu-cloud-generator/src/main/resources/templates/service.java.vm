@@ -1,8 +1,10 @@
 package ${package.Service};
 
+import ${superServiceImplClassPackage};
+import lombok.AllArgsConstructor;
 import ${package.Entity}.${entity};
 import ${package.Mapper}.${table.mapperName};
-import ${superServiceImplClassPackage};
+import org.springframework.stereotype.Service;
 
 /**
 #if(${table.comment})
@@ -12,6 +14,8 @@ import ${superServiceImplClassPackage};
  * @author ${author}
  * @since ${date}
  */
+@AllArgsConstructor
+@Service
 public class ${table.serviceName} extends ${superServiceImplClass}<${table.mapperName}, ${entity}> {
 
 }

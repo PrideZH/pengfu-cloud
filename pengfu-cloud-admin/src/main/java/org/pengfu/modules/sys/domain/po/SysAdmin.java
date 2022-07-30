@@ -14,10 +14,12 @@ import org.pengfu.domain.po.BasePO;
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 @TableName
-public class SysPermission extends BasePO {
+public class SysAdmin extends BasePO {
 
-    private String name;
+    private String username;
 
-    private String code;
+    private String password;
+
+    private Boolean superAdmin;
 
 }

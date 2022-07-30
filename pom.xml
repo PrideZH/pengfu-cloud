@@ -20,6 +20,7 @@
         <module>pengfu-cloud-service</module>
         <!-- 后台管理 -->
         <module>pengfu-cloud-admin</module>
+        <module>pengfu-cloud-generator</module>
     </modules>
 
     <properties>
@@ -29,6 +30,7 @@
         <common.version>1.0-SNAPSHOT</common.version>
         <user-api.version>1.0-SNAPSHOT</user-api.version>
         <order-api.version>1.0-SNAPSHOT</order-api.version>
+        <admin-api.version>1.0-SNAPSHOT</admin-api.version>
 
         <spring-cloud.version>2020.0.1</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
@@ -77,6 +79,13 @@
                 <groupId>org.pengfu</groupId>
                 <artifactId>pengfu-cloud-order-api</artifactId>
                 <version>${order-api.version}</version>
+            </dependency>
+
+            <!-- 后台API模块 -->
+            <dependency>
+                <groupId>org.pengfu</groupId>
+                <artifactId>pengfu-cloud-admin-api</artifactId>
+                <version>${admin-api.version}</version>
             </dependency>
 
             <!-- Spring Cloud Dependencies -->

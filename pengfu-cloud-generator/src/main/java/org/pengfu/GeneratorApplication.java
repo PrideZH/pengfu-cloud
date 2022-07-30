@@ -14,7 +14,7 @@ import java.util.List;
 public class GeneratorApplication {
 
     private static final String URL
-            = "jdbc:mysql://127.0.0.1:3306/pengfu-cloud?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC";
+            = "jdbc:mysql://127.0.0.1:3306/pengfu-cloud-admin?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC";
 
     public static void main(String[] args) {
         FastAutoGenerator.create(URL, "root", "root")
@@ -31,12 +31,10 @@ public class GeneratorApplication {
                             .entity("domain.po"); // 实体层名称
                 })
                 // 策略配置
-                .strategyConfig((scanner, builder) -> {
-                    builder.addInclude(getTables(scanner.apply("请输入表名，多个英文逗号分隔？所有输入 all")))
-                            // Service策略
-                            .serviceBuilder()
-                            .formatServiceFileName("%sService");
-                })
+                .strategyConfig((scanner, builder) -> builder.addInclude(getTables(scanner.apply("请输入表名，多个英文逗号分隔？所有输入 all")))
+                        // Service策略
+                        .serviceBuilder()
+                        .formatServiceFileName("%sService"))
                 // 模板配置
                 .templateConfig(builder -> {
                     builder.disable(TemplateType.XML, TemplateType.SERVICE_IMPL); // 禁用XML文件和Service类

@@ -22,6 +22,12 @@
             <groupId>org.pengfu</groupId>
             <artifactId>pengfu-cloud-user-api</artifactId>
         </dependency>
+
+        <!-- 后台API模块 -->
+        <dependency>
+            <groupId>org.pengfu</groupId>
+            <artifactId>pengfu-cloud-admin-api</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

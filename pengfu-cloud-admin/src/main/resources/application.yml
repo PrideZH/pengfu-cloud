@@ -1,49 +1,20 @@
 server:
-  port: 8080
+  port: 9201
 
 spring:
   application:
-    name: gateway
+    name: admin
   cloud:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
         username: nacos
         password: nacos
-    gateway:
-      globalcors:
-        # gateway 跨域设置
-        cors-configurations:
-          '[/**]':
-            allowed-origin-patterns: "*" # allowedOrigins: "*"
-            allowedHeaders: "*"
-            allowCredentials: true #允许cookie跨域
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - OPTIONS
-              - DELETE
-              - PATCH
-      discovery:
-        locator:
-          enabled: true # 开启nacos注册中心路由功能
-          lower-case-service-id: true # 服务名小写
-      # 必须指明Routes Swagger才可使用
-      routes:
-        - id: user
-          uri: lb://user
-          predicates:
-            - Path=/user/**
-        - id: order
-          uri: lb://order
-          predicates:
-            - Path=/order/**
-        - id: admin
-          uri: lb://admin
-          predicates:
-            - Path=/admin/**
-
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/pengfu-cloud-admin?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
   # redis配置
   redis:
     # Redis数据库索引（默认为0）
@@ -87,3 +58,6 @@ sa-token:
   is-read-cookie: false
   # 是否从head中读取token
   is-read-head: true
+
+swagger:
+  enable: true
