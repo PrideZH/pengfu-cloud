@@ -14,6 +14,8 @@ import org.pengfu.modules.sys.mapper.SysAdminMapper;
 import org.pengfu.util.StpAdminUtil;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * @author PrideZH
  * @since 2022/7/30 14:22
@@ -44,8 +46,8 @@ public class SysAdminService extends ServiceImpl<SysAdminMapper, SysAdmin> {
     }
 
     public void create(SysAdminCreateDTO sysAdminCreateDTO) {
-        if (sysAdminMapper.selectOne(new LambdaQueryWrapper<SysAdmin>()
-                .eq(SysAdmin::getUsername, sysAdminCreateDTO.getUsername())) != null) {
+        if (sysAdminMapper.exists(new LambdaQueryWrapper<SysAdmin>()
+                .eq(SysAdmin::getUsername, sysAdminCreateDTO.getUsername()))) {
             throw new ServiceException(1001, "账号已存在");
         }
 
@@ -54,6 +56,14 @@ public class SysAdminService extends ServiceImpl<SysAdminMapper, SysAdmin> {
         sysAdmin.setPassword(SaSecureUtil.sha256(sysAdmin.getPassword()));
 
         sysAdminMapper.insert(sysAdmin);
+    }
+
+    public void deleteByIds(List<Long> ids) {
+        if (sysAdminMapper.exists(new LambdaQueryWrapper<SysAdmin>().in(SysAdmin::getId).eq(SysAdmin::getDelFlag, 0))) {
+            throw new ServiceException(1001, "不能删除超级管理员");
+        }
+
+        sysAdminMapper.deleteBatchIds(ids);
     }
 
 }

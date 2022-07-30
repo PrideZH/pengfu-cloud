@@ -1,5 +1,6 @@
 package org.pengfu.modules.sys.domain.po;
 
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -19,5 +20,8 @@ public class SysRole extends BasePO {
     private String name;
 
     private String code;
+
+    @TableLogic
+    private Boolean delFlag;
 
 }

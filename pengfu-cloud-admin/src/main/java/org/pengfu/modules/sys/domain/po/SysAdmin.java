@@ -22,4 +22,6 @@ public class SysAdmin extends BasePO {
 
     private Boolean superAdmin;
 
+    private Boolean delFlag;
+
 }

@@ -4,6 +4,7 @@ import cn.hutool.core.collection.CollUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.AllArgsConstructor;
+import org.pengfu.exception.ServiceException;
 import org.pengfu.modules.sys.domain.po.SysAdmin;
 import org.pengfu.modules.sys.domain.po.SysAdminRole;
 import org.pengfu.modules.sys.domain.po.SysRole;
@@ -55,6 +56,14 @@ public class SysRoleService extends ServiceImpl<SysRoleMapper, SysRole> {
                         .select(SysRole::getCode)
                         .in(SysRole::getId, roleIds))
                 .stream().map(SysRole::getCode).toList();
+    }
+
+    public void deleteByIds(List<Long> ids) {
+        if (sysAdminRoleMapper.exists(new LambdaQueryWrapper<SysAdminRole>().in(SysAdminRole::getRoleId, ids))) {
+            throw new ServiceException(1001, "角色被引用");
+        }
+
+        sysRoleMapper.deleteBatchIds(ids);
     }
 
 }
