@@ -21,6 +21,13 @@
             <groupId>org.pengfu</groupId>
             <artifactId>pengfu-cloud-admin-api</artifactId>
         </dependency>
+
+        <!-- 阿里OSS -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alicloud-oss</artifactId>
+            <version>2.2.0.RELEASE</version>
+        </dependency>
     </dependencies>
 
 </project>

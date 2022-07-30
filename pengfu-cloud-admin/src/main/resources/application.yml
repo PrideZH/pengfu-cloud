@@ -37,6 +37,12 @@ spring:
         max-idle: 10
         # 连接池中的最小空闲连接
         min-idle: 0
+  # 阿里OSS配置
+  alicloud:
+    access-key:
+    secret-key:
+    oss:
+      endpoint:
 
 # Sa-Token配置
 sa-token:
