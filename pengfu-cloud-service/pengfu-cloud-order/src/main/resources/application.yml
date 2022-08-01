@@ -17,7 +17,8 @@ spring:
     password: root
   cache:
     type: redis # 指定缓存类型为 redis
-    spring.cache.redis.time-to-live: 60000 # 缓存过期时间
+    redis:
+      time-to-live: 60000 # 缓存过期时间
 
 swagger:
   enable: true

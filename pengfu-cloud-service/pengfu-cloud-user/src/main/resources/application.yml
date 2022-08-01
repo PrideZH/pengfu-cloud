@@ -15,6 +15,10 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/pengfu-cloud?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: root
+  cache:
+    type: redis # 指定缓存类型为 redis
+    redis:
+      time-to-live: 60000 # 缓存过期时间
   main:
     # 允许存在多个Feign调用相同服务
     allow-bean-definition-overriding: true
