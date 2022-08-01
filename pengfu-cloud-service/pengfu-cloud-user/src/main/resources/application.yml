@@ -15,6 +15,9 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/pengfu-cloud?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: root
+  main:
+    # 允许存在多个Feign调用相同服务
+    allow-bean-definition-overriding: true
 
 swagger:
   enable: true
