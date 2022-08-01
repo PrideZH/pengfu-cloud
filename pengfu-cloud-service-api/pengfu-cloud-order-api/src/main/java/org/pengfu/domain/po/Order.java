@@ -12,7 +12,7 @@ import lombok.ToString;
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
-@TableName
+@TableName("tb_order")
 public class Order extends BasePO {
 
     private Long userId;
