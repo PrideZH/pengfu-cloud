@@ -1,9 +1,9 @@
 server:
-  port: 9202
+  port: 9203
 
 spring:
   application:
-    name: user
+    name: order
   cloud:
     nacos:
       discovery:
@@ -15,9 +15,9 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/pengfu-cloud?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: root
-  main:
-    # 允许存在多个Feign调用相同服务
-    allow-bean-definition-overriding: true
+  cache:
+    type: redis # 指定缓存类型为 redis
+    spring.cache.redis.time-to-live: 60000 # 缓存过期时间
 
 swagger:
   enable: true
